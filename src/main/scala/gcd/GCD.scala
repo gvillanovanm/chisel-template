@@ -32,3 +32,8 @@ class GCD extends Module {
   io.outputGCD := x
   io.outputValid := y === 0.U
 }
+
+
+object gcddriver extends App {
+  chisel3.Driver.execute(args, () => new GCD)
+}
