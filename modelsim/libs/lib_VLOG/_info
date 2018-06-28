@@ -1,0 +1,32 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/gvillanova/Engineering/developer/hw/systemverilog/workspace/uart/vlog
+vBlackBoxModule
+!s110 1528806401
+!i10b 1
+!s100 NaKj[:I78N8b=ozgE8JDR1
+IE@z8]9=^E7BOdoOE`_igo2
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1528806394
+8BlackBoxModule.v
+FBlackBoxModule.v
+L0 1
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1528806401.000000
+!s107 BlackBoxModule.v|
+!s90 -work|lib_VLOG|BlackBoxModule.v|
+!i113 1
+o-work lib_VLOG
+tCvgOpt 0
+n@black@box@module
