@@ -1,61 +1,22 @@
-#
-# Building Chisel examples without too much sbt/scala/... stuff
-#
-# sbt looks for default into a folder ./project and . for build.sdt and Build.scala
-# sbt creates per default a ./target folder
-
+# Compiler
 SBT = sbt
 
+# Compile Chisel HDL
+compile_foo:
+	sbt compile
 
 # Generate Verilog code
-test:
-	$(SBT) "runMain test.TestMain"
-
-switch:
-	$(SBT) "runMain switch.AluMain"
-
-bb:
-	$(SBT) "runMain bb.BBMain"
-
-timer:
-	$(SBT) "runMain timer.TimerMain"
-
-uart:
-	$(SBT) "runMain uart.UartMain"
-
-alu:
-	$(SBT) "runMain simple.AluMain"
-
-knight:
-	$(SBT) "runMain simple.KnightMain"
-
-old_uart:
-	$(SBT) "runMain old_uart.UartMain"
-
+verilog_foo:
+	$(SBT) "runMain foo.FooMain"
 
 # Generate the C++ simulation and run the tests
-
-alu-test:
-	$(SBT) "test:runMain simple.AluTester"
-
-counter:
-	$(SBT) "test:runMain simple.CounterTester"
-
-knight-test:
-	$(SBT) "test:runMain simple.KnightTester"
-
-fifo-test:
-	$(SBT) "test:runMain simple.FifoTester"
-
-fifo-view:
-	gtkwave generated/BubbleFifo.vcd --save=bubble.gtkw
-
-fifo: fifo-test fifo-view
+simulator_foo:
+	$(SBT) "test:runMain foo.FooTester"
 
 clean:
 	rm -rf test_run_dir
 	rm -rf target
-	rm -rf project/project
-	rm -rf project/target
+	rm -rf project
+	rm -rf generated
 	rm -rf output
 	rm -rf obj_dir
